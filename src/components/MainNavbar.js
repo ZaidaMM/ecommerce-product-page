@@ -7,16 +7,18 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 const MainNavbar = () => {
   return (
     <div>
-      <Navbar expand='sm' className='bar my-4'>
-        <NavbarBrand href='/'>
+      <Navbar expand='md' className='bar'>
+        <NavbarBrand href='/' className='logo'>
           <img src='../../images/logo.svg' alt='Logo' />
         </NavbarBrand>
-        <NavbarToggler />
+        <NavbarToggler className='nav-toggler'>
+          <img src='../../images/icon-menu.svg' alt='toggler' />
+        </NavbarToggler>
         <Collapse navbar className='nav-collapse'>
           <Nav navbar>
             <NavItem className='nav-item'>

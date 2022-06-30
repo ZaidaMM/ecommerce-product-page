@@ -36,25 +36,28 @@ body {
 .container-fluid {
   width: 100%;
   max-width: 1110px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0;
   text-align: center;
 }
 .bar {
   display: flex;
   align-self: center;
   vertical-align: middle;
+  margin-bottom: -10px;
 }
-
 .logo {
   display: flex;
   align-self: center;
 }
 .nav-item a {
   color: hsl(219, 9%, 45%);
-  margin-left: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 30px;
+  margin-bottom: 0;
 }
 .nav-item a:hover {
+  box-shadow: inset 0 -2px 0 0 hsl(26, 100%, 55%);
   color: black;
 }
 .nav-icons {
@@ -76,8 +79,53 @@ body {
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .bar {
-    border-bottom: none;
+    min-width: 300px;
+    margin-top: 10px;
+  }
+  .nav-toggler {
+    filter: invert(75%) brightness(1);
+    position: absolute;
+    top: 7px;
+    left: -5px;
+    z-index: 2;
+    border: none;
+    height: 15px;
+    width: 16px;
+  }
+  .logo {
+    padding-left: 25px;
+    height: 28px;
+  }
+  .nav-toggler:hover,
+  :focus {
+    border: none;
+  }
+  .nav-icons .nav-cart {
+    height: 18px;
+  }
+  .nav-icons .nav-avatar {
+    margin-left: 20px;
+    height: 24px;
+    width: 24px;
+  }
+  .line {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 991px) {
+  .bar {
+    min-width: 500px;
+    flex-wrap: nowrap;
+  }
+  .nav-item a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .nav-icons .nav-avatar {
+    margin-left: 20px;
   }
 }
