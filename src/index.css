@@ -44,6 +44,8 @@ body {
   align-self: center;
   vertical-align: middle;
   margin-bottom: -10px;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .nav-brand {
   display: flex;
@@ -78,29 +80,34 @@ body {
   margin-left: 11px;
 }
 
+/* WOMEN */
+.women {
+  background-color: blue;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .main-navbar {
   }
   .navbar {
     margin-top: 10px;
-    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 2rem;
     position: absolute;
     inset: 0 45 0 0;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 45;
   }
   .nav-toggler {
     filter: invert(75%) brightness(1);
     position: absolute;
     top: 7px;
-    left: -8px;
+    left: -3rem;
     z-index: 2;
     height: 15px;
     width: 16px;
-    text-align: left;
+    margin-left: 2rem;
   }
 
   .nav-toggler button,
@@ -109,14 +116,14 @@ body {
     box-shadow: none !important;
   }
   .nav-brand {
-    padding-left: 25px;
+    padding-left: 1rem;
     height: 28px;
   }
   .nav-collapse .nav {
     position: absolute;
-    left: -8px;
     width: 67%;
     padding-top: 90px;
+    padding-left: 0.7rem;
     background-color: white;
     inset: 0 35% 0 0;
     position: fixed;
@@ -134,7 +141,7 @@ body {
     flex-direction: row;
   }
   .nav-icons .nav-cart {
-    height: 18px;
+    height: 20px;
   }
   .nav-icons .nav-avatar {
     margin-left: 20px;
@@ -148,10 +155,6 @@ body {
 
 /* Tablet */
 @media (min-width: 769px) and (max-width: 991px) {
-  .navbar {
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-  }
   .nav-item a {
     margin-left: 8px;
     margin-right: 8px;
