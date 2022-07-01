@@ -33,7 +33,7 @@ body {
   font-size: 16px;
 }
 
-.container-fluid {
+.main-navbar .container-fluid {
   width: 100%;
   max-width: 1110px;
   margin: 0;
@@ -78,19 +78,11 @@ body {
   margin-left: 11px;
 }
 
-/* WOMEN */
-.women {
-  background-color: aquamarine;
-  height: 100vh;
-  min-width: 100vw;
-}
-
 /* Mobile */
 @media (max-width: 768px) {
   .main-navbar {
   }
   .navbar {
-    min-width: 330px !important;
     margin-top: 10px;
     margin-right: 0;
     position: absolute;
@@ -108,6 +100,7 @@ body {
     z-index: 2;
     height: 15px;
     width: 16px;
+    text-align: left;
   }
 
   .nav-toggler button,
@@ -115,18 +108,23 @@ body {
   .nav-toggler button:hover {
     box-shadow: none !important;
   }
-
   .nav-brand {
     padding-left: 25px;
     height: 28px;
   }
-  .nav-collapse {
-    /* width: 250px; */
-    margin-left: 0;
-    padding-left: 0;
+  .nav-collapse .nav {
+    position: absolute;
+    left: -8px;
+    width: 67%;
+    padding-top: 90px;
+    background-color: white;
+    inset: 0 35% 0 0;
+    position: fixed;
   }
-  .nav-item {
+  .nav-item a {
+    color: black;
     text-align: left;
+    padding-top: 10px;
   }
   .nav-item a:hover {
     box-shadow: none;

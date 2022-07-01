@@ -8,7 +8,6 @@ import {
   NavItem,
   NavLink,
 } from 'reactstrap';
-// import { NavLink } from 'react-router-dom';
 
 const MainNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +31,7 @@ const MainNavbar = () => {
           )}
         </NavbarToggler>
         <Collapse navbar className='nav-collapse' isOpen={isOpen}>
-          <Nav navbar>
+          <Nav navbar className='nav'>
             <NavItem className='nav-item'>
               <NavLink href='/'>Collections</NavLink>
             </NavItem>
