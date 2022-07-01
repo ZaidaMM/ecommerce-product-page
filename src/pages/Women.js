@@ -1,4 +1,4 @@
 const Women = () => {
-  return <div>Women</div>;
+  return <div className='women'>Women</div>;
 };
 export default Women;

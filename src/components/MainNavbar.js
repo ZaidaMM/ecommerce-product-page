@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Navbar,
   NavbarBrand,
@@ -10,45 +11,63 @@ import {
 // import { NavLink } from 'react-router-dom';
 
 const MainNavbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleNavbar = (e) => {
+    e.preventDefault();
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div>
-      <Navbar expand='md' className='bar'>
-        <NavbarBrand href='/' className='logo'>
-          <img src='../../images/logo.svg' alt='Logo' />
+    <div className='main-navbar'>
+      <Navbar expand='md' className='navbar'>
+        <NavbarBrand href='/' className='nav-brand'>
+          {!isOpen ? <img src='../../images/logo.svg' alt='logo' /> : ''}
         </NavbarBrand>
-        <NavbarToggler className='nav-toggler'>
-          <img src='../../images/icon-menu.svg' alt='toggler' />
+        <NavbarToggler className='nav-toggler' onClick={toggleNavbar}>
+          {isOpen ? (
+            <img src='../../images/icon-close.svg' alt='close toggler' />
+          ) : (
+            <img src='../../images/icon-menu.svg' alt='open toggler' />
+          )}
         </NavbarToggler>
-        <Collapse navbar className='nav-collapse'>
+        <Collapse navbar className='nav-collapse' isOpen={isOpen}>
           <Nav navbar>
             <NavItem className='nav-item'>
               <NavLink href='/'>Collections</NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem className='nav-item'>
               <NavLink href='/'>Men</NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem className='nav-item'>
               <NavLink href='/women'>Women</NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem className='nav-item'>
               <NavLink href='/'>About</NavLink>
             </NavItem>
-            <NavItem>
+            <NavItem className='nav-item'>
               <NavLink href='/'>Contact</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
-        <div className='nav-icons'>
-          <img
-            src='../../images/icon-cart.svg'
-            alt='cart'
-            className='nav-cart'
-          />
-          <img
-            src='../../images/image-avatar.png'
-            alt='avatar'
-            className='nav-avatar'
-          />
+
+        <div>
+          {!isOpen ? (
+            <div className='nav-icons'>
+              <img
+                src='../../images/icon-cart.svg'
+                alt='cart'
+                className='nav-cart'
+              />
+              <img
+                src='../../images/image-avatar.png'
+                alt='avatar'
+                className='nav-avatar'
+              />
+            </div>
+          ) : (
+            ''
+          )}
         </div>
       </Navbar>
       <div className='line'></div>

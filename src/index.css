@@ -39,13 +39,13 @@ body {
   margin: 0;
   text-align: center;
 }
-.bar {
+.navbar {
   display: flex;
   align-self: center;
   vertical-align: middle;
   margin-bottom: -10px;
 }
-.logo {
+.nav-brand {
   display: flex;
   align-self: center;
 }
@@ -78,29 +78,62 @@ body {
   margin-left: 11px;
 }
 
+/* WOMEN */
+.women {
+  background-color: aquamarine;
+  height: 100vh;
+  min-width: 100vw;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
-  .bar {
-    min-width: 300px;
+  .main-navbar {
+  }
+  .navbar {
+    min-width: 330px !important;
     margin-top: 10px;
+    margin-right: 0;
+    position: absolute;
+    inset: 0 45 0 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 45;
   }
   .nav-toggler {
     filter: invert(75%) brightness(1);
     position: absolute;
     top: 7px;
-    left: -5px;
+    left: -8px;
     z-index: 2;
-    border: none;
     height: 15px;
     width: 16px;
   }
-  .logo {
+
+  .nav-toggler button,
+  .nav-toggler,
+  .nav-toggler button:hover {
+    box-shadow: none !important;
+  }
+
+  .nav-brand {
     padding-left: 25px;
     height: 28px;
   }
-  .nav-toggler:hover,
-  :focus {
-    border: none;
+  .nav-collapse {
+    /* width: 250px; */
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .nav-item {
+    text-align: left;
+  }
+  .nav-item a:hover {
+    box-shadow: none;
+  }
+  .nav-icons {
+    display: flex;
+    flex-direction: row;
   }
   .nav-icons .nav-cart {
     height: 18px;
@@ -117,15 +150,19 @@ body {
 
 /* Tablet */
 @media (min-width: 769px) and (max-width: 991px) {
-  .bar {
-    min-width: 500px;
-    flex-wrap: nowrap;
+  .navbar {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
   }
   .nav-item a {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
   }
   .nav-icons .nav-avatar {
-    margin-left: 20px;
+    margin-left: 15px;
+  }
+  .line {
+    min-width: 725px;
+    margin-left: -1rem;
   }
 }
