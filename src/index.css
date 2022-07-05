@@ -55,8 +55,8 @@ a.nav-link {
   text-decoration: none;
   cursor: pointer;
   color: hsl(219, 9%, 45%) !important;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
   padding: 30px;
   margin-bottom: 0;
 }
@@ -86,7 +86,8 @@ a.nav-link {
 
 /* PRODUCT ITEM */
 .product-item {
-  margin: 5rem 7rem;
+  margin-top: 5rem;
+  margin-left: 9rem;
 }
 .product-item img {
   border-radius: 15px;
@@ -115,7 +116,7 @@ a.nav-link {
 }
 
 .product-item .thumbnails img:hover {
-  opacity: 25%;
+  opacity: 50%;
 }
 .product-item .thumbnails .thumb-container .selected {
   border: 2px solid hsl(26, 100%, 55%);
