@@ -32,7 +32,7 @@ body {
   height: 100vh;
   font-size: 16px;
 }
-
+/* NAVBAR */
 .main-navbar .container-fluid {
   width: 100%;
   max-width: 1110px;
@@ -43,7 +43,7 @@ body {
   display: flex;
   align-self: center;
   vertical-align: middle;
-  margin-bottom: -10px;
+  margin-bottom: -9px;
   margin-left: 2rem;
   margin-right: 2rem;
 }
@@ -51,16 +51,19 @@ body {
   display: flex;
   align-self: center;
 }
-.nav-item a {
-  color: hsl(219, 9%, 45%);
+a.nav-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: hsl(219, 9%, 45%) !important;
   margin-left: 20px;
   margin-right: 20px;
   padding: 30px;
   margin-bottom: 0;
 }
-.nav-item a:hover {
-  box-shadow: inset 0 -2px 0 0 hsl(26, 100%, 55%);
-  color: black;
+.nav-link:hover,
+.nav-link.active {
+  box-shadow: inset 0 -3px 0 0 hsl(26, 100%, 55%);
+  color: black !important;
 }
 .nav-icons {
   cursor: pointer;
@@ -80,13 +83,57 @@ body {
   margin-left: 11px;
 }
 
-/* WOMEN */
+/* PRODUCT ITEM */
+.product-item img {
+  border-radius: 15px;
+}
+.product-item .main-pic img {
+  height: 445px;
+}
+.product-item .thumbnails {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 445px;
+}
+.product-item .thumbnails .thumb-container {
+  border-radius: 15px;
+  border: none;
+  height: 88px;
+  width: 88px;
+  overflow: hidden;
+  margin-top: 31px;
+}
+.product-item .thumbnails .thumb-container img {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.product-item .thumbnails img:hover {
+  opacity: 25%;
+}
+.product-item .thumbnails .thumb-container .selected {
+  border: 2px solid hsl(26, 100%, 55%);
+  height: 88px;
+  width: 88px;
+  overflow: hidden;
+}
+
+/* .product-item .thumbnails img.pic-1,
+.product-item .thumbnails img.pic-2,
+.product-item .thumbnails img.pic-3 {
+  margin-right: 31px;
+} */
+
+/* WOMEN PAGE*/
 .women {
   background-color: blue;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
+  /* NAVBAR */
   .main-navbar {
   }
   .navbar {
@@ -128,13 +175,15 @@ body {
     inset: 0 35% 0 0;
     position: fixed;
   }
-  .nav-item a {
-    color: black;
+  a.nav-link {
+    color: black !important;
     text-align: left;
     padding-top: 10px;
   }
-  .nav-item a:hover {
+  .nav-link:hover,
+  .nav-link.active {
     box-shadow: none;
+    color: black;
   }
   .nav-icons {
     display: flex;
@@ -155,6 +204,7 @@ body {
 
 /* Tablet */
 @media (min-width: 769px) and (max-width: 991px) {
+  /* NAVBAR */
   .nav-item a {
     margin-left: 8px;
     margin-right: 8px;

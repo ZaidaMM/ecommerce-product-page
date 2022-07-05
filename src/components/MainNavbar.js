@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import {
   Navbar,
   NavbarBrand,
@@ -6,8 +7,8 @@ import {
   Collapse,
   Nav,
   NavItem,
-  NavLink,
 } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 const MainNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,19 +34,54 @@ const MainNavbar = () => {
         <Collapse navbar className='nav-collapse' isOpen={isOpen}>
           <Nav navbar className='nav'>
             <NavItem className='nav-item'>
-              <NavLink href='/'>Collections</NavLink>
+              <NavLink
+                to='/collections'
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+              >
+                Collections
+              </NavLink>
             </NavItem>
             <NavItem className='nav-item'>
-              <NavLink href='/'>Men</NavLink>
+              <NavLink
+                to='/men'
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+              >
+                Men
+              </NavLink>
             </NavItem>
             <NavItem className='nav-item'>
-              <NavLink href='/women'>Women</NavLink>
+              <NavLink
+                to='/women'
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+              >
+                Women
+              </NavLink>
             </NavItem>
             <NavItem className='nav-item'>
-              <NavLink href='/'>About</NavLink>
+              <NavLink
+                to='/about'
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+              >
+                About
+              </NavLink>
             </NavItem>
             <NavItem className='nav-item'>
-              <NavLink href='/'>Contact</NavLink>
+              <NavLink
+                to='/contact'
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+              >
+                Contact
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
