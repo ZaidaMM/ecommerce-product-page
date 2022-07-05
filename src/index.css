@@ -35,17 +35,17 @@ body {
 /* NAVBAR */
 .main-navbar .container-fluid {
   width: 100%;
-  max-width: 1110px;
   margin: 0;
-  text-align: center;
+  flex-wrap: nowrap;
 }
+
 .navbar {
   display: flex;
-  align-self: center;
-  vertical-align: middle;
+  justify-content: space-between;
   margin-bottom: -9px;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  /* max-width: 1110px; */
 }
 .nav-brand {
   display: flex;
@@ -78,12 +78,16 @@ a.nav-link {
 }
 .line {
   border-bottom: 1px solid hsl(0, 0%, 90%);
-  max-width: 1110px;
-  width: 99%;
-  margin-left: 11px;
+  /* max-width: 1100px; */
+  width: 90%;
+  align-self: center;
+  margin-left: 4.7rem;
 }
 
 /* PRODUCT ITEM */
+.product-item {
+  margin: 5rem 7rem;
+}
 .product-item img {
   border-radius: 15px;
 }
@@ -128,7 +132,7 @@ a.nav-link {
 
 /* WOMEN PAGE*/
 .women {
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 /* Mobile */
@@ -190,7 +194,7 @@ a.nav-link {
     flex-direction: row;
   }
   .nav-icons .nav-cart {
-    height: 20px;
+    height: 22px;
   }
   .nav-icons .nav-avatar {
     margin-left: 20px;
@@ -205,15 +209,37 @@ a.nav-link {
 /* Tablet */
 @media (min-width: 769px) and (max-width: 991px) {
   /* NAVBAR */
+  .navbar,
+  .nav-collapse .nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 2rem;
+  }
+  .nav-collapse .nav {
+    margin-left: 1rem;
+  }
   .nav-item a {
     margin-left: 8px;
     margin-right: 8px;
+  }
+  .nav-icons {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .nav-icons .nav-cart {
+    height: 22px;
+    align-self: center;
   }
   .nav-icons .nav-avatar {
     margin-left: 15px;
   }
   .line {
-    min-width: 725px;
-    margin-left: -1rem;
+    max-width: 870px;
+    width: 90%;
+    overflow: hidden;
+    margin-left: 2.4rem;
+    align-self: center;
+    justify-self: auto;
   }
 }
