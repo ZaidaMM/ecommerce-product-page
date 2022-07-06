@@ -1,11 +1,15 @@
 import ProductItem from '../components/ProductItem';
 import ProductDescription from '../components/ProductDescription';
+import ProductPrice from '../components/ProductPrice';
 
 const Women = () => {
   return (
     <div className='women'>
       <ProductItem />
-      <ProductDescription />
+      <div className='description-container'>
+        <ProductDescription />
+        <ProductPrice />
+      </div>
     </div>
   );
 };
