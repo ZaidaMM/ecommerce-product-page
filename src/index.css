@@ -113,7 +113,7 @@ a.nav-link {
   height: 88px;
   width: 88px;
   overflow: hidden;
-  margin-top: 31px;
+  margin-top: 35px;
 }
 .product-item .thumbnails .thumb-container img {
   height: 100%;
@@ -139,6 +139,7 @@ a.nav-link {
   color: hsl(26, 100%, 55%);
   text-transform: uppercase;
   letter-spacing: 3px;
+  font-size: 0.9rem;
 }
 .product-description h1 {
   margin-bottom: 35px;
@@ -147,31 +148,96 @@ a.nav-link {
 p {
   color: hsl(219, 9%, 45%);
   font-size: 18px;
-  line-height: 1.8;
+  /* line-height: 1.8; */
 }
 
 /* PRODUCT PRICE */
 .product-price .current-price {
   display: flex;
   flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 .product-price .current-price .price {
-  letter-spacing: 1px;
+  font-size: 30px;
 }
 .product-price .current-price .discount {
   color: hsl(26, 100%, 55%);
   background-color: hsl(25, 100%, 94%);
-  font-size: 10px;
-  padding: 0 5px;
+  font-size: 15px;
+  height: 27px;
+  width: 51px;
   margin-left: 20px;
   display: flex;
+  justify-content: center;
   align-items: center;
   border-radius: 5px;
 }
 .product-price .prev-price {
-  font-size: 10px;
+  font-size: 15px;
   color: hsl(219, 9%, 75%);
   text-decoration: line-through;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40px;
+}
+/* BUTTON */
+.button-container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 15px;
+}
+.button-container .btn {
+  background-color: hsl(223, 64%, 98%);
+  border-color: hsl(223, 64%, 98%);
+  height: 56px;
+  width: 52px;
+}
+.button-container .btn:hover,
+.button-container .btn.btn-minus.active {
+  background-color: hsl(223, 64%, 98%);
+  border-color: hsl(223, 64%, 98%);
+}
+.button-container .btn-minus {
+  border-radius: 20% 0 0 20%;
+}
+.button-container .btn.btn-plus {
+  border-radius: 0 20% 20% 0;
+}
+.button-container .btn .btn-img:hover {
+  opacity: 50%;
+}
+
+.button-container .counter {
+  background-color: hsl(223, 64%, 98%);
+  height: 56px;
+  width: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LARGE_BUTTON */
+.large-btn .btn.orange-btn {
+  background-color: hsl(26, 100%, 55%);
+  border: hsl(26, 100%, 55%);
+  height: 56px;
+  width: 272px;
+  border-radius: 10px;
+}
+.large-btn .btn.orange-btn img {
+  color: white;
+  /* filter: invert(1) brightness(1); */
+}
+.large-btn .btn.orange-btn span {
+  color: white;
+  margin-left: 15px;
 }
 
 /* WOMEN PAGE*/
@@ -186,6 +252,7 @@ p {
   align-content: center;
   margin-right: 4rem;
   margin-left: 2rem;
+  margin-top: 4rem;
 }
 
 /* Mobile */
