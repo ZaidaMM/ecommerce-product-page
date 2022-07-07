@@ -14,6 +14,7 @@ const CounterButtons = () => {
   };
   const handleCounterPlus = (e) => {
     e.preventDefault();
+    if (counter >= 10) return 10;
     setCounter(counter + 1);
     setIsActive(!isActive);
     console.log(counter);
